@@ -1,8 +1,8 @@
 package by.academy.lesson1;
 
 public class Cat {
-     int age;
-     String nickname;
+     private int age;
+     private String nickname;
      
      public Cat() {
     	 super();
