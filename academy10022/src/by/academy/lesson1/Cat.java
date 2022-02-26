@@ -45,4 +45,8 @@ public class Cat {
      public void setNickname(String nickname) {
     	 this.nickname = nickname;
      }
+     
+     public void test() {
+    	 
+     }
 }
