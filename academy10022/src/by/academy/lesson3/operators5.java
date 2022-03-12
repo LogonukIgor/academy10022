@@ -12,7 +12,7 @@ public class operators5 {
 		System.out.println("Введите второе число:");
 		double y = scanner.nextInt();
 		
-		if(x>y) {
+		if(x > y) {
 			System.out.println("Большее число " + x);
 			System.out.println("Меньшее число " + y);
 		} else {
