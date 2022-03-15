@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class task1 {
 	public static void main(String[] args) {
+		
 		Scanner scanner = new Scanner(System.in);
 		double discount;
 
@@ -15,16 +16,16 @@ public class task1 {
 
 		if (price >= 400) {
 			discount = 20;
-		} else if (price < 400 & price >= 300) {
+		} else if (price < 400 && price >= 300) {
 			discount = 15;
-		} else if (price < 300 & price >= 200) {
+		} else if (price < 300 && price >= 200) {
 			discount = 12;
 			if (age >= 18) {
 				discount = discount + 4;
 			} else {
 				discount = discount - 3;
 			}
-		} else if (price < 200 & price >= 100) {
+		} else if (price < 200 && price >= 100) {
 			discount = 7;
 		} else {
 			discount = 5;
@@ -36,6 +37,7 @@ public class task1 {
 		price = price - discount;
 
 		System.out.println("Цена с учётом скидки: $" + price);
+		
 		scanner.close();
 	}
 }

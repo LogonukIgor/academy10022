@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class task3 {
 	public static void main(String[] args) {
+		
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Введите цифру от 1 до 10:");
@@ -16,5 +17,7 @@ public class task3 {
 			System.out.println(x + " * " + y + " = " + z);
 			y++;
 		}
+		
+		scanner.close();
 	}
 }

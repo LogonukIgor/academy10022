@@ -2,7 +2,7 @@ package by.academy.lesson3;
 
 public class operators4 {
 	public static void main(String[] args) {
-		int s = 1_370_000;
+		int s = 9_370_000;
 		int sec;
 		int m;
 		int min;
@@ -12,6 +12,7 @@ public class operators4 {
 		int day;
 		int w;
 		int week;
+		int mn;
 
 		sec = s % 60;
 		m = (s - sec) / 60;
@@ -21,7 +22,10 @@ public class operators4 {
 		d = (h - hour) / 24;
 		day = d % 7;
 		w = (d - day) / 7;
+		week = w % 4;
+		mn = (w - week) / 4;
 
-		System.out.println(w + " недель " + day + " дней " + hour + " часов " + min + " минут " + sec + " секунд");
+		System.out.println(mn + " месяцев " + week + " недель " + day + " дней " + hour + " часов " + min + " минут "
+				+ sec + " секунд");
 	}
 }
