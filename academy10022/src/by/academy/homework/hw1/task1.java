@@ -21,9 +21,9 @@ public class task1 {
 		} else if (price < 300 && price >= 200) {
 			discount = 12;
 			if (age >= 18) {
-				discount = discount + 4;
+				discount += 4;
 			} else {
-				discount = discount - 3;
+				discount -= 3;
 			}
 		} else if (price < 200 && price >= 100) {
 			discount = 7;
@@ -34,7 +34,7 @@ public class task1 {
 		System.out.println("Скидка: " + discount + "%");
 
 		discount = price * (discount / 100);
-		price = price - discount;
+		price -= discount;
 
 		System.out.println("Цена с учётом скидки: $" + price);
 		

@@ -20,7 +20,7 @@ public class task2 {
 		case "double":
 			System.out.println("Введите число: ");
 			double s3 = scanner.nextDouble();
-			s3 = s3 * 0.7;
+			s3 *= 0.7;
 			System.out.println("70% от числа: " + s3);
 			break;
 		case "float":
