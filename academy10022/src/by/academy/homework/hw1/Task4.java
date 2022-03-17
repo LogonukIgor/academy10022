@@ -1,6 +1,6 @@
 package by.academy.homework.hw1;
 
-public class task4 {
+public class Task4 {
 	public static void main(String[] args) {
 		
 		int degree = 1;
