@@ -1,4 +1,4 @@
-package by.academy.tasks.operators1;
+package by.academy.tasks.operators;
 
 public class task3 {
 	public static void main(String[] args) {

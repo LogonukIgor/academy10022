@@ -1,4 +1,4 @@
-package by.academy.tasks.operators1;
+package by.academy.tasks.operators;
 
 import java.util.Scanner;
 
