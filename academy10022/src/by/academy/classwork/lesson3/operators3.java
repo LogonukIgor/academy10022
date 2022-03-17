@@ -1,4 +1,4 @@
-package by.academy.lesson3;
+package by.academy.classwork.lesson3;
 
 public class operators3 {
 	public static void main(String[] args) {

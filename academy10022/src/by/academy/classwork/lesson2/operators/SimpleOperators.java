@@ -1,4 +1,4 @@
-package by.academy.lesson2.operators;
+package by.academy.classwork.lesson2.operators;
 
 public class SimpleOperators {
 

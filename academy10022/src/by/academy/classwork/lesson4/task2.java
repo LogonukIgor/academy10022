@@ -1,20 +1,19 @@
-package by.academy.lesson4;
+package by.academy.classwork.lesson4;
 
 import java.util.Scanner;
 
-public class task3 {
+public class task2 {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Введите число: ");
-		double x = scanner.nextInt();
-		double p = 1;
+		int x = scanner.nextInt();
+		int sum = 0;
 		
 		for (int i = 1; i <= x;i++) {
-			p = (double) p * i;
-			System.out.println(p);
+			sum = sum + i;
 		}
+		System.out.println(sum);
 	}
 }
-
