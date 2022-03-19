@@ -1,6 +1,7 @@
 package by.academy.homework.hw1;
 
 public class Task4 {
+	
 	public static void main(String[] args) {
 		
 		int degree = 1;
@@ -9,9 +10,6 @@ public class Task4 {
 
 		while (y < 1_000_000) {
 			y = Math.pow(x, degree);
-//			if(y>1_000_000) {
-//				break;
-//			}
 			System.out.println(x + " в степени " + degree + " = " + y);
 			degree++;
 		}
