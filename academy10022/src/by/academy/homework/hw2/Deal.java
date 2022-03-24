@@ -4,10 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Deal {
+	
+	private static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 
 		String[] cards1 = { "6", "7", "8", "9", "10", "Валет", "Дама", "Король", "Туз" };

@@ -3,10 +3,11 @@ package by.academy.homework.hw2;
 import java.util.Scanner;
 
 public class Task1 {
+	
+	private static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Введите первую строку:");
 		String str1 = scanner.nextLine();
