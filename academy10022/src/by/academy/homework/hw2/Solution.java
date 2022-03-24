@@ -5,9 +5,17 @@ import java.util.Scanner;
 
 public class Solution {
 
-	static int pairs(int k, int[] arr) {
+	static int pairs(int k, int n, int[] arr) {
 		int pairsCount = 0;
-		
+
+		for (int i = 0; i < n - 1; i++) {
+			for (int j = 0; j < arr.length; j++) {
+				if (arr[i] - arr[j] == k) {
+					pairsCount++;
+				}
+			}
+		}
+
 		return pairsCount;
 	}
 
@@ -24,17 +32,18 @@ public class Solution {
 		int[] arr = new int[n];
 
 		String[] arrItems = scanner.nextLine().split(" ");
+		
+		System.out.println("Массив чисел:");
 
 		for (int i = 0; i < n; i++) {
 			arr[i] = Integer.parseInt(arrItems[i]);
-			System.out.println(arr[i]);
+			System.out.print(arr[i] + " ");
 		}
+		System.out.println();
 
-		int result = pairs(k, arr);
-		System.out.println(result);
+		int result = pairs(k, n, arr);
+		System.out.println("Количество пар (разность которых равна " + k + "): " + result);
 
 		scanner.close();
 	}
 }
-
-
