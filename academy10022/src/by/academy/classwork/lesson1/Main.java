@@ -9,7 +9,7 @@ public class Main {
     	System.out.println(cat2.getNickname());
     	cat2.setAge(5);
     	
-    	cat2.walk();
+    	cat1.walk();
     	cat2.eat();
     	cat2.sleep();
     	cat2.grow(5);

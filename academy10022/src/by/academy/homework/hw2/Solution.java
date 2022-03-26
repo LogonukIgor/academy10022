@@ -22,7 +22,8 @@ public class Solution {
 	private static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) throws IOException {
-
+		
+		System.out.println("Введите n и k через пробел:");
 		String[] nk = scanner.nextLine().split(" ");
 
 		int n = Integer.parseInt(nk[0]);
@@ -30,7 +31,8 @@ public class Solution {
 		int k = Integer.parseInt(nk[1]);
 
 		int[] arr = new int[n];
-
+		
+		System.out.println("Введите массив:");
 		String[] arrItems = scanner.nextLine().split(" ");
 		
 		System.out.println("Массив чисел:");
