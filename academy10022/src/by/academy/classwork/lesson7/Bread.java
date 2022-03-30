@@ -1,15 +1,15 @@
 package by.academy.classwork.lesson7;
 
-public class Cheese extends Product {
+public class Bread extends Product{
+	
+	private String color;
 
-	protected String color;
-
-	public Cheese() {
+	public Bread() {
 		super();
 	}
-
-	public Cheese(double price, int quantity, String name, String color) {
-		super(price, quantity, name);
+	
+	public Bread(double price, int quantity, String name, String color) {
+		super(price,quantity,name);
 		this.color = color;
 	}
 
@@ -24,12 +24,12 @@ public class Cheese extends Product {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Cheese  ");
+		builder.append("Bread   ");
 		builder.append(name);
 		builder.append(" ");
-		builder.append(" " + quantity);
+		builder.append("         "+quantity);
 		builder.append(" шт.");
 		return builder.toString();
 	}
-
+	
 }

@@ -1,35 +1,33 @@
 package by.academy.classwork.lesson7;
 
 public class Product {
-	private double price;
-	private int quantity;
-	private String name;
-	
+
+	protected double price;
+	protected int quantity;
+	protected String name;
+
 	public Product() {
-		System.out.println("Конструирование объекта Product");
-		price = 9.49;
-		quantity = 10;
-		name = "Cheese";
+		super();
 	}
-	
-	public Product(double price, int quantity) {
-		this();
-	}
-	
+
 	public Product(double price, int quantity, String name) {
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
 	}
-	
+
+	public double getCalculatePrice() {
+		return price * quantity;
+	}
+
 	public void onShelf() {
 		System.out.println("Тавар " + name + " выставлен на продажу.");
 	}
-	
+
 	public void debited() {
 		System.out.println("Тавар " + name + " списан.");
 	}
-	
+
 	public double getPrice() {
 		return price;
 	}
@@ -37,7 +35,7 @@ public class Product {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
+
 	public int getValue() {
 		return quantity;
 	}
@@ -45,7 +43,7 @@ public class Product {
 	public void setMoney(int quantity) {
 		this.quantity = quantity;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -53,4 +51,18 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Product [price=");
+		builder.append(price);
+		builder.append(", quantity=");
+		builder.append(quantity);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }
