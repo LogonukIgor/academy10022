@@ -13,12 +13,22 @@ public class Shop {
 		Product cheese = new Cheese(5, 2, "Brest-litovsk", "yellow");
 		Product butter = new Butter(3, 1, "Brest-litovsk", "yellow");
 
-		products[0] = milk;
-		products[1] = bread;
-		products[2] = cheese;
-		products[3] = butter;
+//		products[0] = milk;
+//		products[1] = bread;
+//		products[2] = cheese;
+//		products[3] = butter;
 
-		Deal deal = new Deal("12:16 Mondey", "Minsk", buyer, seller, products);
-		deal.deal();
+		Deal deal = new Deal("12:16 Mondey", "Minsk", buyer, seller);
+//		deal.deal();
+		System.out.println(deal);
+
+		deal.addProduct(milk);
+		deal.addProduct(bread);
+		deal.addProduct(cheese);
+		deal.addProduct(butter);
+		System.out.println(deal);
+		
+		deal.removeProduct(1);
+		System.out.println(deal);
 	}
 }

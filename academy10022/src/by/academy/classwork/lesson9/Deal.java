@@ -1,4 +1,4 @@
-package by.academy.classwork.lesson7;
+package by.academy.classwork.lesson9;
 
 import java.util.Arrays;
 
@@ -9,18 +9,9 @@ public class Deal {
 	protected User buyer;
 	protected User seller;
 	protected Product[] products;
-	protected int index = 0;
 
 	public Deal() {
 		super();
-	}
-
-	public Deal(String timeDate, String place, User buyer, User seller) {
-		super();
-		this.timeDate = timeDate;
-		this.place = place;
-		this.buyer = buyer;
-		this.seller = seller;
 	}
 
 	public Deal(String timeDate, String place, User buyer, User seller, Product[] products) {
@@ -30,30 +21,6 @@ public class Deal {
 		this.buyer = buyer;
 		this.seller = seller;
 		this.products = products;
-	}
-
-	public void addProduct(Product product) {
-		if (products == null) {
-			index = 0;
-			products = new Product[10];
-		}
-		if (index >= products.length) {
-			productsGrow();
-		}
-		products[index++] = product;
-	}
-
-	public void productsGrow() {
-		Product[] tempProducts = new Product[products.length * 2 + 1];
-		System.arraycopy(products, 0, tempProducts, 0, products.length);
-		products = tempProducts;
-	}
-
-	public void removeProduct(int removeIndex) {
-		if (removeIndex < products.length && removeIndex >= 0) {
-			System.arraycopy(products, removeIndex + 1, products, removeIndex, products.length - index - removeIndex);
-			products[--index] = null;
-		}
 	}
 
 	public void deal() {
@@ -116,22 +83,6 @@ public class Deal {
 
 	public void setSeller(User seller) {
 		this.seller = seller;
-	}
-
-	public Product[] getProducts() {
-		return products;
-	}
-
-	public void setProducts(Product[] products) {
-		this.products = products;
-	}
-
-	public int getIndex() {
-		return index;
-	}
-
-	public void setIndex(int index) {
-		this.index = index;
 	}
 
 	@Override
