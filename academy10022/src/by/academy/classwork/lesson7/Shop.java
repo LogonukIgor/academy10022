@@ -8,18 +8,12 @@ public class Shop {
 		User seller = new User(21, "Igor", 20);
 		Product[] products = new Product[4];
 
-		Product milk = new Milk(2.5, 3, "Brest-litovsk", "white");
-		Product bread = new Bread(2, 1, "Vodar", "brown");
-		Product cheese = new Cheese(5, 2, "Brest-litovsk", "yellow");
-		Product butter = new Butter(3, 1, "Brest-litovsk", "yellow");
+		Product milk = new Milk(2.5, 3, "A", "1");
+		Product bread = new Bread(2, 1, "B", "1");
+		Product cheese = new Cheese(5, 2, "C", "1");
+		Product butter = new Butter(3, 1, "D", "1");
 
-//		products[0] = milk;
-//		products[1] = bread;
-//		products[2] = cheese;
-//		products[3] = butter;
-
-		Deal deal = new Deal("12:16 Mondey", "Minsk", buyer, seller);
-//		deal.deal();
+		Deal deal = new Deal("12:16 Mn", "Minsk", buyer, seller,products);
 		System.out.println(deal);
 
 		deal.addProduct(milk);

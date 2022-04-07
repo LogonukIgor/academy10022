@@ -29,11 +29,13 @@ public class Cheese extends Product {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Cheese  ");
+		builder.append("Cheese [price=");
+		builder.append(price);
+		builder.append(", quantity=");
+		builder.append(quantity);
+		builder.append(", name=");
 		builder.append(name);
-		builder.append(" ");
-		builder.append(" " + quantity);
-		builder.append(" шт.");
+		builder.append("]");
 		return builder.toString();
 	}
 

@@ -15,14 +15,6 @@ public class Deal {
 		super();
 	}
 
-	public Deal(String timeDate, String place, User buyer, User seller) {
-		super();
-		this.timeDate = timeDate;
-		this.place = place;
-		this.buyer = buyer;
-		this.seller = seller;
-	}
-
 	public Deal(String timeDate, String place, User buyer, User seller, Product[] products) {
 		super();
 		this.timeDate = timeDate;
@@ -51,7 +43,7 @@ public class Deal {
 
 	public void removeProduct(int removeIndex) {
 		if (removeIndex < products.length && removeIndex >= 0) {
-			System.arraycopy(products, removeIndex + 1, products, removeIndex, products.length - index - removeIndex);
+			System.arraycopy(products, removeIndex + 1, products, removeIndex, products.length - removeIndex - 1);
 			products[--index] = null;
 		}
 	}
@@ -72,18 +64,6 @@ public class Deal {
 			seller.maney += fullPrice;
 			buyer.maney -= fullPrice;
 		}
-		System.out.println("-------------- ОАО СКАМ --------------");
-		System.out.println();
-		System.out.println("Товары:");
-		System.out.println();
-
-		for (Product p : products) {
-			System.out.println(p + "  " + p.getCalculatePrice() + "р");
-		}
-		System.out.println();
-		System.out.println("                      Итого:  " + fullPrice + "р");
-		System.out.println();
-		System.out.println("-------------------------------------");
 	}
 
 	public String getTimeDate() {

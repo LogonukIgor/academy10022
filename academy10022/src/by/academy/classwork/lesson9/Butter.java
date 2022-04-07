@@ -10,7 +10,7 @@ public class Butter extends Milk {
 		super(price, quantity, name, color);
 		this.color = color;
 	}
-	
+
 	@Override
 	public double getDiscount() {
 		return 1;
@@ -19,11 +19,13 @@ public class Butter extends Milk {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Butter  ");
+		builder.append("Butter [price=");
+		builder.append(price);
+		builder.append(", quantity=");
+		builder.append(quantity);
+		builder.append(", name=");
 		builder.append(name);
-		builder.append(" ");
-		builder.append(" "+quantity);
-		builder.append(" шт.");
+		builder.append("]");
 		return builder.toString();
 	}
 

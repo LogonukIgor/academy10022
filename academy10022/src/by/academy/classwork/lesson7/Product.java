@@ -1,6 +1,6 @@
 package by.academy.classwork.lesson7;
 
-public class Product {
+public abstract class Product {
 
 	protected double price;
 	protected int quantity;
@@ -19,6 +19,8 @@ public class Product {
 	public double getCalculatePrice() {
 		return price * quantity;
 	}
+	
+	public abstract double getDiscount();
 
 	public void onShelf() {
 		System.out.println("Тавар " + name + " выставлен на продажу.");
