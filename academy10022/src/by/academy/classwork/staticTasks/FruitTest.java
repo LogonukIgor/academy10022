@@ -1,4 +1,4 @@
-package by.academy.classwork.fruits9;
+package by.academy.classwork.staticTasks;
 
 public class FruitTest {
 

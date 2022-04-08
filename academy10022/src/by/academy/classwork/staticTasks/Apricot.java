@@ -1,14 +1,14 @@
-package by.academy.classwork.fruits9;
+package by.academy.classwork.staticTasks;
 
-public class Pear extends Fruit {
+public class Apricot extends Fruit {
 
 	protected double pricePerKilogram;
 
-	public Pear() {
+	public Apricot() {
 		super();
 	}
 
-	public Pear(double weight, double pricePerKilogram) {
+	public Apricot(double weight, double pricePerKilogram) {
 		super(weight);
 		this.pricePerKilogram = pricePerKilogram;
 	}
@@ -29,7 +29,7 @@ public class Pear extends Fruit {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Pear [pricePerKilogram=");
+		builder.append("Apricot [pricePerKilogram=");
 		builder.append(pricePerKilogram);
 		builder.append("]");
 		return builder.toString();

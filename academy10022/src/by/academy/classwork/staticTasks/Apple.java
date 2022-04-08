@@ -1,18 +1,18 @@
-package by.academy.classwork.fruits9;
+package by.academy.classwork.staticTasks;
 
-public class Apricot extends Fruit {
+public class Apple extends Fruit {
 
 	protected double pricePerKilogram;
-
-	public Apricot() {
+	
+	public Apple() {
 		super();
 	}
-
-	public Apricot(double weight, double pricePerKilogram) {
+	
+	public Apple(double weight,double pricePerKilogram) {
 		super(weight);
 		this.pricePerKilogram = pricePerKilogram;
 	}
-
+	
 	@Override
 	public double fruitPrice() {
 		return weight * pricePerKilogram;
@@ -29,10 +29,10 @@ public class Apricot extends Fruit {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Apricot [pricePerKilogram=");
+		builder.append("Apple [pricePerKilogram=");
 		builder.append(pricePerKilogram);
 		builder.append("]");
 		return builder.toString();
 	}
-
+	
 }
