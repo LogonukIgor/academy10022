@@ -29,6 +29,12 @@ public class Phone {
 		System.out.println("Звонит " + name + ". С номера " + number);
 	}
 
+	public void sendMassage(long... args) {
+		for (long i : args) {
+			System.out.println("Сообщение отправлено на номер +" + i + " ");
+		}
+	}
+
 	public long getNumber() {
 		return number;
 	}

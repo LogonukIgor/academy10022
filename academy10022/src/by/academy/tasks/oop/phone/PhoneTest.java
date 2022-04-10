@@ -14,5 +14,7 @@ public class PhoneTest {
 		p2.receiveCall("Петя", 375333485357L);
 		p2.receiveCall("Саша", 375333485358L);
 		
+		p1.sendMassage(375335663991L,375335663999L);
+		
 	}
 }
