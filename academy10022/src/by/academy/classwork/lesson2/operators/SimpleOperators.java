@@ -39,6 +39,10 @@ public class SimpleOperators {
 		j++;
 		--j;
 		System.out.println(j);
+
+		for (int k = 0; k < 3; k++) {
+			System.out.println("Hello world");
+		}
 	}
 
 }
