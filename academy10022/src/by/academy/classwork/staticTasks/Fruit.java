@@ -3,7 +3,6 @@ package by.academy.classwork.staticTasks;
 public abstract class Fruit {
 	
 	protected double weight;
-	int hello;
 	
 	public Fruit() {
 		super();
