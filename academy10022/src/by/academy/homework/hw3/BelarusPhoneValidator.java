@@ -1,4 +1,4 @@
-package by.academy.classwork.lesson7;
+package by.academy.homework.hw3;
 
 public class BelarusPhoneValidator implements Validator {
 

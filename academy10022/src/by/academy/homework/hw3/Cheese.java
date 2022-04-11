@@ -1,18 +1,18 @@
-package by.academy.classwork.lesson7;
+package by.academy.homework.hw3;
 
-public class Milk extends Product {
+public class Cheese extends Product {
 
 	private String grade;
 
-	public Milk() {
+	public Cheese() {
 		super();
 	}
 
-	public Milk(double price, int quantity, String name, String grade) {
+	public Cheese(double price, int quantity, String name, String grade) {
 		super(price, quantity, name);
 		this.grade = grade;
 	}
-
+	
 	@Override
 	public double getDiscount() {
 		if(getQuantity()>=3) {
@@ -32,7 +32,7 @@ public class Milk extends Product {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Milk [price=");
+		builder.append("Cheese [price=");
 		builder.append(getPrice());
 		builder.append(", quantity=");
 		builder.append(getQuantity());
