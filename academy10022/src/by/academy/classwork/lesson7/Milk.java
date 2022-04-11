@@ -2,7 +2,7 @@ package by.academy.classwork.lesson7;
 
 public class Milk extends Product {
 
-	protected String grade;
+	private String grade;
 
 	public Milk() {
 		super();
@@ -15,6 +15,9 @@ public class Milk extends Product {
 
 	@Override
 	public double getDiscount() {
+		if(getQuantity()>=3) {
+			return 0.8;
+		}
 		return 1;
 	}
 
@@ -30,11 +33,11 @@ public class Milk extends Product {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Milk [price=");
-		builder.append(price);
+		builder.append(getPrice());
 		builder.append(", quantity=");
-		builder.append(quantity);
+		builder.append(getQuantity());
 		builder.append(", name=");
-		builder.append(name);
+		builder.append(getName());
 		builder.append("]");
 		return builder.toString();
 	}

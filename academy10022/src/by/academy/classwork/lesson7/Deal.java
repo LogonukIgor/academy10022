@@ -1,18 +1,28 @@
 package by.academy.classwork.lesson7;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class Deal {
 
-	protected String timeDate;
-	protected String place;
-	protected User buyer;
-	protected User seller;
-	protected Product[] products;
-	protected int index = 0;
+	private String timeDate;
+	private String place;
+	private User buyer;
+	private User seller;
+	private Product[] products;
+	private int index = 0;
+	private static final LocalDate DEADLINE = LocalDate.now().plusDays(10);
 
 	public Deal() {
 		super();
+	}
+
+	public Deal(String timeDate, String place, User buyer, User seller) {
+		super();
+		this.timeDate = timeDate;
+		this.place = place;
+		this.buyer = buyer;
+		this.seller = seller;
 	}
 
 	public Deal(String timeDate, String place, User buyer, User seller, Product[] products) {
@@ -49,20 +59,38 @@ public class Deal {
 	}
 
 	public void deal() {
+		if (RegexDate.test(timeDate) == true) {
+			System.out.println("Дата сделки прошла проверку");
+		} else if (RegexDate.test(timeDate) == false) {
+			System.out.println("Измените дату на формат dd/mm/yyyy(dd-mm-yyyy)");
+			return;
+		}
 		if (products == null) {
 			System.out.println("В корзине ничего нет)");
 			return;
 		}
 		double fullPrice = 0;
-		for (Product p : products) {
-			fullPrice += p.getCalculatePrice();
+		for (int i = 0; i < products.length; i++) {
+			if (products[i] != null) {
+				fullPrice += products[i].getCalculatePrice();
+			}
 		}
-		if (buyer.maney < fullPrice) {
+		if (buyer.getManey() < fullPrice) {
 			System.out.println("У Вас недостаточно денег");
 			return;
 		} else {
-			seller.maney += fullPrice;
-			buyer.maney -= fullPrice;
+			System.out.println("-----------CHECK-----------");
+			System.out.println("Больше двух единиц товара - скидка 20%");
+			for (int i = 0; i < products.length; i++) {
+				if (products[i] != null) {
+					System.out.println(i + 1 + ". " + products[i].getName() + "    " + products[i].getQuantity() + "шт   "
+							+ products[i].getCalculatePrice() + "$");
+				}
+			}
+			System.out.println("Итого: " + fullPrice + "$");
+			System.out.println("--------------------------");
+			System.out.println("Стало денег у продавца: " + seller.sellerManey(fullPrice) + "$");
+			System.out.println("Стало денег у покупателя: " + buyer.buyerManey(fullPrice) + "$");
 		}
 	}
 
@@ -113,6 +141,12 @@ public class Deal {
 	public void setIndex(int index) {
 		this.index = index;
 	}
+
+	public static LocalDate getDeadline() {
+		return DEADLINE;
+	}
+	
+	
 
 	@Override
 	public String toString() {

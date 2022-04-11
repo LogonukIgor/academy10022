@@ -2,9 +2,9 @@ package by.academy.classwork.lesson7;
 
 public abstract class Product {
 
-	protected double price;
-	protected int quantity;
-	protected String name;
+	private double price;
+	private int quantity;
+	private String name;
 
 	public Product() {
 		super();
@@ -17,9 +17,9 @@ public abstract class Product {
 	}
 
 	public double getCalculatePrice() {
-		return price * quantity;
+		return price * quantity * getDiscount();
 	}
-	
+
 	public abstract double getDiscount();
 
 	public void onShelf() {
@@ -52,6 +52,14 @@ public abstract class Product {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	@Override

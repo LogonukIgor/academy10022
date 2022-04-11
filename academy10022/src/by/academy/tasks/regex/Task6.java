@@ -8,7 +8,7 @@ public class Task6 {
 	
 	public static final Scanner scanner = new Scanner(System.in);
 
-	public static final Pattern p = Pattern.compile("([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}");
+	public static final Pattern p = Pattern.compile("^(+1)\\\\d{9}$");
 
 	public static void main(String[] args) {
 

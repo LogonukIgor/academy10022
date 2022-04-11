@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class Task1 {
 
-	public static final Pattern p = Pattern.compile("\\S\\D\\W");
+	public static final Pattern p = Pattern.compile("^\\d{2}[\\/\\-]\\d{2}[\\/\\-]\\d{4}$");
 
 	public static void main(String[] args) {
 
