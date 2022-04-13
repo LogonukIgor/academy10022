@@ -1,6 +1,7 @@
 package by.academy.homework.hw3;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class Deal {
@@ -80,6 +81,9 @@ public class Deal {
 			return;
 		} else {
 			System.out.println("-----------CHECK-----------");
+			DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd MM u");
+			String s = timeDate.replaceAll("\\/", " ");
+			System.out.println(dateTimeFormatter.parse(s));
 			System.out.println("Больше двух единиц товара - скидка 20%");
 			for (int i = 0; i < products.length; i++) {
 				if (products[i] != null) {
