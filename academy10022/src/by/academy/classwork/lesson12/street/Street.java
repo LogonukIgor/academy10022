@@ -4,12 +4,16 @@ public class Street {
 
 	public class House {
 
-		int houseNumber = 10;
+		int houseNumber = 20;
 
 		public void printHouseNumber() {
 			System.out.println("Номер дома: " + houseNumber);
 		}
+
+	}
+
+	public static class Car {
 		
 	}
-	
+
 }
