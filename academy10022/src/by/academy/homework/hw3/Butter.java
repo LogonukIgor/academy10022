@@ -1,7 +1,10 @@
 package by.academy.homework.hw3;
 
+import by.academy.homework.hw3.annotation.Producer;
+
+@Producer(startYear = 2022, founderFullName = "Брест-литовск")
 public class Butter extends Milk {
-	
+
 	private String grade;
 
 	public Butter() {
@@ -11,10 +14,10 @@ public class Butter extends Milk {
 	public Butter(double price, int quantity, String name, String grade) {
 		super(price, quantity, name, grade);
 	}
-	
+
 	@Override
 	public double getDiscount() {
-		if(getQuantity()>=3) {
+		if (getQuantity() >= 3) {
 			return 0.8;
 		}
 		return 1;

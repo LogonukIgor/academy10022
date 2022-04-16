@@ -1,8 +1,20 @@
 package by.academy.homework.hw3;
 
 public class Shop {
-
+	
 	public static void main(String[] args) {
+
+		Validator emailValidator = new Validator() {
+
+			@Override
+			public boolean validate(String line) {
+				if (RegexDate.validEmail(line) == false) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		};
 		
 		User buyer = new User(20, "Alex", 100);
 		User seller = new User(21, "Igor", 10);

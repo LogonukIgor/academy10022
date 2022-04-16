@@ -1,21 +1,24 @@
 package by.academy.homework.hw3;
 
-public class Bread extends Product{
-	
+import by.academy.homework.hw3.annotation.Producer;
+
+@Producer(startYear = 2022, founderFullName = "Нёманский")
+public class Bread extends Product {
+
 	private String grade;
 
 	public Bread() {
 		super();
 	}
-	
+
 	public Bread(double price, int quantity, String name, String grade) {
-		super(price,quantity,name);
+		super(price, quantity, name);
 		this.grade = grade;
 	}
-	
+
 	@Override
 	public double getDiscount() {
-		if(getQuantity()>=3) {
+		if (getQuantity() >= 3) {
 			return 0.8;
 		}
 		return 1;
@@ -41,5 +44,5 @@ public class Bread extends Product{
 		builder.append("]");
 		return builder.toString();
 	}
-	
+
 }

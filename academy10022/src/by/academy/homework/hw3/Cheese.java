@@ -1,5 +1,8 @@
 package by.academy.homework.hw3;
 
+import by.academy.homework.hw3.annotation.Producer;
+
+@Producer(startYear = 2022, founderFullName = "Брест-литовск")
 public class Cheese extends Product {
 
 	private String grade;
@@ -12,10 +15,10 @@ public class Cheese extends Product {
 		super(price, quantity, name);
 		this.grade = grade;
 	}
-	
+
 	@Override
 	public double getDiscount() {
-		if(getQuantity()>=3) {
+		if (getQuantity() >= 3) {
 			return 0.8;
 		}
 		return 1;
