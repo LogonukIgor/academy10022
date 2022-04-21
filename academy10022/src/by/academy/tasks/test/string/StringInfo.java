@@ -11,7 +11,6 @@ public class StringInfo {
 		super();
 		System.out.println("введите стоку:");
 		this.str1 = SCANNER.nextLine().split(" ");
-		System.out.println("Строка в регистре!");
 	}
 
 	public StringInfo(String[] str1) {
