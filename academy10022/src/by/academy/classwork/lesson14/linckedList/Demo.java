@@ -11,5 +11,9 @@ public class Demo {
 		stringList1.add(1,"f");
 		
 		System.out.println(stringList1.get(1));
+		System.out.println(stringList1.get(2));
+		System.out.println(stringList1.get(3));
+		stringList1.remove(3);
+		System.out.println(stringList1.get(2));
 	}
 }

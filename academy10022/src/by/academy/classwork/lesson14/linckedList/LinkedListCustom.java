@@ -2,80 +2,125 @@ package by.academy.classwork.lesson14.linckedList;
 
 public class LinkedListCustom<T> {
 
-	private Node head;
-	private Node tail;
-	private long size = 0;
+	private Node<T> head;
+	private Node<T> tail;
+	private Integer size = 0;
 
 	public void add(T value) {
-		Node newNode = new Node(value);
-		if (head == null) {
-			tail = newNode;
-			head = newNode;
-		} else {
-			tail.next = newNode;
-			newNode.prev = tail;
-			tail = newNode;
 
+		Node<T> node = new Node<>(value);
+		if (head == null) {
+			head = node;
+			tail = node;
+		} else {
+			tail.next = node;
+			node.prev = tail;
+			tail = node;
 		}
 		size++;
+
+	}
+
+	public int getSize() {
+		return size;
 	}
 
 	public void add(int index, T value) {
-		if (index < 0 || index > size - 1) {
-			System.err.println("Index of bound exception");
+
+		if (size < index) {
+			System.out.println("Ошибка");
 			return;
-		}
-		Node newNode = new Node(value);
-		if (index == 0) {
-			newNode.next = head;
-			head.prev = newNode;
-			head = newNode;
+		} else if (size == index) {
+			add(value);
+			return;
+		} else {
+			Node<T> node = new Node<>(value);
+			int counter = 0;
+			Node<T> current = head;
+			while (counter < index) {
+				current = current.next;
+				counter++;
+			}
+			node.next = current;
+			node.prev = current.prev;
+			current.prev.next = node;
+			current.prev = node;
 			size++;
-			return;
-		} else if (index == size) {
-			newNode.prev = tail;
-			tail.next = newNode;
-			tail = newNode;
-			size++;
-			return;
 		}
-		Node indexNode = getNode(index);
-		
-		Node next = indexNode.next;
-		Node prev = indexNode.prev; 
-		prev.next = newNode;
-		next.prev = newNode;
-		size--;
-		size++;
+
 	}
 
-	private Node getNode(int index) {
-		if (index < 0 || index > size - 1) {
-			System.err.println("Index of bound exception");
-			return null;
+	public void remove(int index) {
+
+		if (size < index) {
+			System.out.println("Ошибка");
+			return;
 		}
-		int counter = 0;
-		Node currentNode = head;
-		while (index < counter) {
-			currentNode = currentNode.next;
-			counter++;
+		if (index == size - 1) {
+			Node<T> prev = tail.prev;
+			prev.next = null;
+			tail = prev;
+			size--;
+			return;
+		} else {
+			int counter = 0;
+			Node<T> current = head;
+			while (counter < index) {
+				current = current.next;
+				counter++;
+			}
+			Node<T> prev = current.prev;
+			Node<T> next = current.next;
+			prev.next = next;
+			next.prev = prev;
+			size--;
 		}
-		return currentNode;
+
 	}
 
 	public T get(int index) {
-		Node node = getNode(index);
+
+		Node<T> node = head;
+		int current = 0;
+
+		while (current < index) {
+			node = node.next;
+			current++;
+		}
+
 		return node.value;
 	}
 
-	class Node {
-		T value;
-		Node prev;
-		Node next;
+	public void print() {
+		Node<T> current = head;
+		while (current != null) {
+			System.out.println(current.value);
+			current = current.next;
+		}
+	}
 
-		public Node(T value) {
-			super();
+	class Node<T> {
+
+		T value;
+		Node<T> next;
+		Node<T> prev;
+
+		Node(T value) {
 			this.value = value;
 		}
+
+		@Override
+		public String toString() {
+			StringBuilder builder = new StringBuilder();
+			builder.append("Node [value=");
+			builder.append(value);
+			builder.append(", next=");
+			builder.append(next);
+			builder.append(", prev=");
+			builder.append(prev);
+			builder.append("]");
+			return builder.toString();
+		}
+
 	}
 }
