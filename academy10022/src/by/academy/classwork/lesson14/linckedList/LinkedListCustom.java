@@ -45,7 +45,7 @@ public class LinkedListCustom<T> {
 		Node prev = indexNode.prev; 
 		prev.next = newNode;
 		next.prev = newNode;
-		
+		size--;
 		size++;
 	}
 
