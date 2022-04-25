@@ -1,4 +1,4 @@
-package by.academy.classwork.test.task2;
+package by.academy.testwork.task2;
 
 import java.util.Arrays;
 import java.util.Random;
