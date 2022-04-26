@@ -1,4 +1,4 @@
-package by.academy.classwork.lesson13.task1;
+package by.academy.tasks.gener;
 
 public class Test {
 
