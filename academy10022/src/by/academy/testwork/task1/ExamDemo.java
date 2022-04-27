@@ -17,13 +17,14 @@ public class ExamDemo {
 		}
 
 		Exam<Integer> exam = new Exam<>(array2);
-		System.out.println("Начальный массив:"+Arrays.toString(array2));
+		System.out.println("Начальный массив:"+Arrays.toString(exam.getMark()));
 		
 		exam.add(2,7);
-		System.out.println("Add element:     "+Arrays.toString(array2));
+		System.out.println("Add element:     "+Arrays.toString(exam.getMark()));
 		
 		exam.remove(1);
 		System.out.println("Remove element:  "+Arrays.toString(exam.getMark()));
+		
 		
 		System.out.println(exam.averageMark());
 	}
