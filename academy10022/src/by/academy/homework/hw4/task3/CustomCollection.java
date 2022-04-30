@@ -17,28 +17,9 @@ public class CustomCollection<T> {
 	public void setArray(T[] array) {
 		this.array = array;
 	}
-	
+
 	public CustomIterator getIterator() {
 		return new ArrayIterator();
-	}
-
-	private class ArrayIterator implements CustomIterator {
-		
-		int index;
-
-		@Override
-		public boolean hasNext() {
-			if(index<array.length) {
-				return true;
-			}
-			return false;
-		}
-
-		@Override
-		public Object next() {
-			return array[index++];
-		}
-
 	}
 
 	@Override
@@ -48,6 +29,22 @@ public class CustomCollection<T> {
 		builder.append(Arrays.toString(array));
 		builder.append("]");
 		return builder.toString();
+	}
+
+	private class ArrayIterator implements CustomIterator {
+
+		int index;
+
+		@Override
+		public boolean hasNext() {
+			return index < array.length;
+		}
+
+		@Override
+		public Object next() {
+			return array[index++];
+		}
+
 	}
 
 }
