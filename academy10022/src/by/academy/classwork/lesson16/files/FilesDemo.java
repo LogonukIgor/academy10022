@@ -24,6 +24,7 @@ public class FilesDemo {
 				output.write(a);
 				System.out.print(a);
 			}
+			
 		} catch (IOException e) {
 			System.out.println("Опа, ошибка!");
 		}

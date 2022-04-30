@@ -1,9 +1,13 @@
 package by.academy.classwork.lesson1;
 
-public class Cat {
+import java.io.Serializable;
+
+public class Cat implements Serializable {
+
+	private static final long serialVersionUID = 2L;
 	private int age;
 	private int money;
-	private String nickname;
+	private transient String nickname;
 	private char initials;
 	private boolean isHomeAnimal;
 
@@ -11,9 +15,11 @@ public class Cat {
 		super();
 	}
 
-	public Cat(String nickname) {
+	public Cat(String nickname, int age, int money) {
 		super();
 		this.nickname = nickname;
+		this.age = age;
+		this.money = money;
 	}
 
 	public void sleep() {
@@ -30,7 +36,8 @@ public class Cat {
 
 	public void grow(int addAge) {
 		this.age = age + addAge;
-		System.out.println("Кот" + nickname + " вырос на " + addAge + " лет(год)." + "Ему сейчас " + age + " лет(года).");
+		System.out
+				.println("Кот" + nickname + " вырос на " + addAge + " лет(год)." + "Ему сейчас " + age + " лет(года).");
 	}
 
 	public int getAge() {
@@ -71,5 +78,18 @@ public class Cat {
 
 	public void setIsHomeAnimal(boolean isHomeAnimal) {
 		this.isHomeAnimal = isHomeAnimal;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Cat [age=");
+		builder.append(age);
+		builder.append(", money=");
+		builder.append(money);
+		builder.append(", nickname=");
+		builder.append(nickname);
+		builder.append("]");
+		return builder.toString();
 	}
 }
