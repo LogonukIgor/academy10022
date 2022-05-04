@@ -8,8 +8,9 @@ public class Task6 {
 
 	public static void main(String[] args) {
 
+		int[] array = new int[8];
+
 		try {
-			int[] array = new int[8];
 			for (int i = 0; i < 10; i++) {
 				array[i] = RANDOM.nextInt(11);
 			}
