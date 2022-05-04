@@ -14,18 +14,18 @@ public class Task2 {
 
 		filling(arrayList);
 		filling(linkedList);
-		
+
 		long startArray = System.currentTimeMillis();
 		for (int i = 0; i < 100_000; i++) {
-            arrayList.get((int) (Math.random() * 999_999));
-        }
+			arrayList.get((int) (Math.random() * 999_999));
+		}
 		long endArray = System.currentTimeMillis();
 		System.out.println("Время получения 100000 элементов ArrayList " + (endArray - startArray) + " ms");
 
 		long startLinked = System.currentTimeMillis();
 		for (int i = 0; i < 100_000; i++) {
-            arrayList.get((int) (Math.random() * 999_999));
-        }
+			arrayList.get((int) (Math.random() * 999_999));
+		}
 		long endtLinked = System.currentTimeMillis();
 		System.out.println("Время получения 100000 элементов LinkedList " + (endtLinked - startLinked) + " ms");
 
